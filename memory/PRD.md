@@ -26,10 +26,18 @@ Website booking untuk Royale Villa Malino (villa di Malino, Gowa, Sulsel). Fitur
 
 ## Implemented (2026-08-14)
 - Landing page award-level: kinetic hero + parallax, marquee amenities, manifesto chapters, tetris gallery + lightbox, video ambiance section, facilities, pricing cards, booking calendar, reviews, footer
-- Booking API: create (with availability conflict check), booked-dates, admin list, status update
+- Booking API: create (with availability conflict check + auto total price by weekday/weekend), booked-dates, admin list, status update
 - Admin: JWT login, dashboard (booking management + video upload/delete)
 - Object storage video upload & serving via `/api/media/{path}`
 - Real villa photos mapped correctly (hero = frontal exterior)
+
+## Implemented (2026-08-14, iterasi 2)
+- **360° virtual tour**: viewer Pannellum (equirectangular), owner unggah panorama via admin (kind=pano). Fallback jika belum ada.
+- **Galeri admin**: owner unggah/hapus foto galeri via admin (kind=gallery), muncul otomatis di section Galeri.
+- **Pembayaran bank**: info rekening (editable di admin) + tamu unggah bukti transfer (`/bookings/{id}/proof`) + admin verifikasi pembayaran. Tetap konek WhatsApp.
+- **Notifikasi email owner** (Resend managed) saat booking baru — aktif bila `owner_email` diisi di admin settings.
+- **Dashboard analitik**: stat cards (total booking, omset, terkonfirmasi, menunggu) + grafik booking & omset per bulan (recharts). Omset dihitung dari booking berstatus confirmed.
+- **Harga otomatis**: total dihitung per malam (weekday Sen-Kam / weekend Jum-Min) sesuai paket.
 
 ## Backlog
 - P1: Foto panorama 360° asli (saat tersedia dari owner)

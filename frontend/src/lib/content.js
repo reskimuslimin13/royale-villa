@@ -50,8 +50,29 @@ export const PACKAGES = [
   },
 ];
 
-export const REVIEWS = [
-  { name: "Tamu Google", text: "Kamar luas, WC bersih, Dapur Besar, Wastafel elegan. Sangat nyaman untuk keluarga." },
+export const REVIEWS = [  { name: "Tamu Google", text: "Kamar luas, WC bersih, Dapur Besar, Wastafel elegan. Sangat nyaman untuk keluarga." },
   { name: "Tamu Google", text: "Pemilik villa sangat ramah, view depan dan belakang sangat indah." },
   { name: "Tamu Google", text: "Area hiburannya juga mendukung untuk acara keluarga maupun gathering." },
 ];
+
+export const RATES = {
+  "Per Lantai": { weekday: 1400000, weekend: 1600000 },
+  "Full Villa": { weekday: 2700000, weekend: 3000000 },
+};
+
+export const rupiah = (n) => "Rp " + Number(n || 0).toLocaleString("id-ID");
+
+export const computeTotal = (pkg, from, to) => {
+  if (!from || !to) return 0;
+  const rate = RATES[pkg] || RATES["Per Lantai"];
+  let total = 0;
+  const cur = new Date(from);
+  const end = new Date(to);
+  while (cur < end) {
+    const dow = cur.getDay();
+    const weekend = dow === 5 || dow === 6 || dow === 0;
+    total += weekend ? rate.weekend : rate.weekday;
+    cur.setDate(cur.getDate() + 1);
+  }
+  return total || rate.weekday;
+};
