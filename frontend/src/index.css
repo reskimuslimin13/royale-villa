@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #F4F1EB;
+  --surface: #EAE5DC;
+  --primary: #4A6B53;
+  --primary-dark: #3A5541;
+  --secondary: #C26D5C;
+  --text: #1A1A1A;
+  --text-soft: #5C5C5C;
+  --border: #D8D3C8;
+  --forest: #1E2A23;
+}
+
+* { border-color: var(--border); }
+
+html { scrollbar-width: thin; scrollbar-color: var(--primary) var(--surface); }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif { font-family: 'Cormorant Garamond', serif; }
+.font-sans { font-family: 'Manrope', sans-serif; }
+
+::selection { background: var(--primary); color: #F4F1EB; }
+
+.overline { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.22em; font-weight: 700; }
+
+.marquee-track { display: inline-flex; white-space: nowrap; animation: marquee 32s linear infinite; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.hover-lift { transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), background-color 0.4s ease, color 0.4s ease; }
+.hover-lift:hover { transform: translateY(-4px); }
+
+.img-zoom { transition: transform 0.7s cubic-bezier(0.22,1,0.36,1); }
+.img-zoom:hover { transform: scale(1.06); }
+
+/* react-day-picker custom */
+.rdp { --rdp-cell-size: 40px; margin: 0; }
+.rdp-day_selected, .rdp-day_selected:hover { background: var(--primary) !important; color: #fff !important; }
+.rdp-day_today { font-weight: 700; color: var(--secondary); }
+.rdp-day_disabled { color: #bcb8ae; text-decoration: line-through; opacity: 0.55; }
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) { background: var(--surface); }

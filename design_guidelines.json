@@ -1,0 +1,129 @@
+{
+  "theme_and_art_direction": {
+    "concept": "Natural Elegance & Editorial Immersion",
+    "vibe": "Awwwards-level luxury hospitality. Calm, breathing space, tactile realism, and warm storytelling.",
+    "color_archetype": "Organic & Earthy blended with Luxury (Deep Forest & Warm Sand)",
+    "mode": "Light theme dominant with strategic Dark theme sections (for contrast in video or gallery areas)."
+  },
+  "colors": {
+    "light": {
+      "background": "#F4F1EB",
+      "surface": "#EAE5DC",
+      "primary": "#4A6B53",
+      "secondary": "#C26D5C",
+      "text_primary": "#1A1A1A",
+      "text_secondary": "#5C5C5C",
+      "border": "#D8D3C8"
+    },
+    "dark": {
+      "background": "#1E2A23",
+      "surface": "#2A3A31",
+      "primary": "#D4E0D8",
+      "secondary": "#C26D5C",
+      "text_primary": "#F4F1EB",
+      "text_secondary": "#A3B3A8",
+      "border": "#3A4A41"
+    }
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Cormorant Garamond, serif",
+      "body": "Manrope, sans-serif",
+      "accent": "Manrope, sans-serif (uppercase, tracking-widest)"
+    },
+    "scales": {
+      "h1": "text-5xl md:text-6xl+ tracking-tighter leading-none font-light",
+      "h2": "text-4xl md:text-5xl tracking-tight leading-tight",
+      "h3": "text-2xl md:text-3xl",
+      "body": "text-base md:text-lg leading-relaxed text-text_secondary",
+      "overline": "text-xs uppercase tracking-[0.2em] font-bold"
+    },
+    "instructions": "NEVER use default fonts. Include `<link href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Manrope:wght@300;400;500;700&display=swap' rel='stylesheet'>` in index.html."
+  },
+  "layouts_and_grids": {
+    "spacing": "Generous spacing. Use py-24 or py-32 for section breaks.",
+    "hero": "Full height (100vh) kinetic hero. Asymmetrical alignment. Huge serif typography intersecting with the background image. Overlay must be max bg-black/40.",
+    "gallery": "The 'Tetris' Grid (Mode A). grid-cols-1 md:grid-cols-12 gap-4 or gap-8. Span variations: col-span-8 row-span-2 (Hero image), col-span-4 (Supporting).",
+    "container": "Use max-w-[1400px] mx-auto px-6 md:px-12."
+  },
+  "components": {
+    "booking_bar": "Sticky glassmorphism container (backdrop-blur-xl bg-white/70 border border-white/20 shadow-sm) at the bottom of the screen or bottom of hero. Contains DatePicker and 'Cek Ketersediaan' button.",
+    "calendar": "Shadcn Calendar customized. Highlights today. Unavailable dates must be grayed out and disabled. Highlight selected range.",
+    "pricing_cards": "Flat solid surfaces. 1px delicate border (border-border). No heavy drop shadows. Generous internal padding (p-10). Use primary color for the CTA button ('Pesan via WhatsApp').",
+    "video_player": "Large cinematic container. Minimal UI. Custom large play button overlay. Border radius max 8px.",
+    "marquee": "The 'Editorial Ribbon'. Slow moving text showing amenities: 'Kamar Luas • WC Bersih • Dapur Besar • Wastafel Elegan'. Font-serif, pale background, dark earthy text.",
+    "buttons": "Pill-shaped or sharp rectangular with 1px border. Hover effect: slight lift (-translate-y-1) and background color darken."
+  },
+  "motion_and_interactions": {
+    "scrolling": "MANDATORY: Use `lenis` for smooth momentum scrolling.",
+    "animations": "Framer Motion for page load (staggered text reveal on hero), scroll-triggered fade-up for sections, and parallax effect on hero image.",
+    "hover": "Image hover in gallery should have a subtle scale (scale-105) with long duration (duration-700).",
+    "microinteractions": "Buttons and interactive elements must have clear hover states with contrast shifts."
+  },
+  "image_urls": [
+    {
+      "category": "hero_exterior",
+      "url": "https://images.unsplash.com/photo-1759250850335-fdb0d139b7ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjB2aWxsYSUyMG1vdW50YWluJTIwZm9yZXN0JTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzg2NjY5NDQ5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern lodge nestled in a mountain forest landscape. Use for Hero background."
+    },
+    {
+      "category": "gallery_exterior",
+      "url": "https://images.unsplash.com/photo-1782545286930-8afd47909ea0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjB2aWxsYSUyMG1vdW50YWluJTIwZm9yZXN0JTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzg2NjY5NDQ5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Rustic house in green trees. Use in Interactive Gallery."
+    },
+    {
+      "category": "bedroom",
+      "url": "https://images.unsplash.com/photo-1760067538083-b9d87cd6706c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxlbGVnYW50JTIwc3BhY2lvdXMlMjBiZWRyb29tJTIwZm9yZXN0JTIwdmlld3xlbnwwfHx8fDE3ODY2Njk0NDl8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern bedroom with large windows. Use for Facilities/Gallery."
+    },
+    {
+      "category": "kitchen",
+      "url": "https://images.unsplash.com/photo-1682888813913-e13f18692019?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBsYXJnZSUyMGtpdGNoZW4lMjBlbGVnYW50fGVufDB8fHx8MTc4NjY2OTQ0OXww&ixlib=rb-4.1.0&q=85",
+      "description": "Large kitchen with marble island. Use for Facilities/Gallery."
+    },
+    {
+      "category": "nature_gathering",
+      "url": "https://images.unsplash.com/photo-1760442826568-2b435e5ae608?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxmYW1pbHklMjBnYXRoZXJpbmclMjBuYXR1cmUlMjByZXNvcnR8ZW58MHx8fHwxNzg2NjY5NDQ5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "People swimming in natural pool. Use for Ambiance/Gallery."
+    }
+  ],
+  "accessibility": {
+    "contrast": "Ensure text over hero image has sufficient contrast (use bg-black/40 overlay).",
+    "focus": "All interactive elements must have focus:ring-2 focus:ring-primary focus:outline-none.",
+    "testing": "All interactive and key informational elements MUST include a `data-testid` attribute."
+  },
+  "universal_guidelines_for_main_agent": [
+    "NEVER use generic centered layouts or simplistic gradients.",
+    "CREATE depth through layered design elements with z-index hierarchy and glass-morphism.",
+    "DO NOT apply universal transition (`transition: all`). Apply transitions to specific properties.",
+    "DO NOT center align the app container (`.App { text-align: center; }`). Use left alignment for text to maintain reading flow.",
+    "USE modern button styles with hover interaction animations. NO default browser styles.",
+    "NO emoji icons. Use `lucide-react` or `@phosphor-icons/react`.",
+    "Every interaction needs micro-animations (hover states, parallax, entrance).",
+    "Use 2-3x more spacing than feels comfortable (e.g., p-8 to p-24).",
+    "Use `sonner` for toast notifications.",
+    "For the hybrid_fullstack setup: Create a simple backend (FastAPI) to manage booking dates. The frontend should fetch booked dates to disable them on the Shadcn Calendar.",
+    "The booking flow: User selects date -> Validates availability -> Fills form -> Redirects to WhatsApp API (`wa.me/6285395512330?text=...`) with formatted message."
+  ],
+  "content_strategy": {
+    "brand_name": "ROYALE VILLA MALINO",
+    "rating": "5.0 ★ (86 ulasan)",
+    "location": "Malino, Kec. Tinggimoncong, Kabupaten Gowa, Sulawesi Selatan 92174",
+    "contact": "0853-9551-2330",
+    "pricing_packages": [
+      {
+        "name": "Per Lantai",
+        "capacity": "Maksimal 15 Orang",
+        "weekday": "Rp 1.400.000 / malam (Senin - Kamis)",
+        "weekend": "Rp 1.600.000 / malam (Jumat - Minggu)"
+      },
+      {
+        "name": "Full Villa",
+        "capacity": "Kapasitas 50 Orang",
+        "weekday": "Rp 2.700.000 / malam (Senin - Kamis)",
+        "weekend": "Rp 3.000.000 / malam (Jumat - Minggu)"
+      }
+    ],
+    "amenities": ["Kamar luas", "WC bersih", "Dapur Besar", "Wastafel elegan", "Area hiburan & gathering", "View indah"]
+  }
+}
